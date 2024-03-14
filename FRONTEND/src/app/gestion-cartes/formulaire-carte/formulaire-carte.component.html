@@ -1,0 +1,8 @@
+<form [formGroup]="carteForm" (ngSubmit)="onSubmit()">
+    <input formControlName="nomCarte" placeholder="Nom de la carte">
+    <input formControlName="codeCarte" placeholder="Numéro de la carte">
+    <input formControlName="ccv" placeholder="CCV">
+    <input formControlName="expirationMois" placeholder="Mois d'expiration">
+    <input formControlName="expirationAnnee" placeholder="Année d'expiration">
+    <button type="submit" [disabled]="!carteForm.valid">Soumettre</button>
+  </form>

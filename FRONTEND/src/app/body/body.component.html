@@ -1,0 +1,15 @@
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="clientModel.nom" (ngModelChange)="validateNom($event)" name="nom" placeholder="Nom">
+    <input type="text" [(ngModel)]="clientModel.prenom" (ngModelChange)="validatePrenom($event)" name="prenom" placeholder="Prénom">  
+    <input type="text" [(ngModel)]="clientModel.adresse" name="adresse" placeholder="Adresse">
+    <input type="text" [(ngModel)]="clientModel.cp" (ngModelChange)="validateNumber($event)" name="cp" placeholder="Code Postal">
+    <input type="text" [(ngModel)]="clientModel.ville" (ngModelChange)="validateNom($event)" name="ville" placeholder="Ville">
+    <input type="text" [(ngModel)]="clientModel.tel" (ngModelChange)="validateNumber($event)" name="tel" placeholder="Téléphone">
+    <input type="text" [(ngModel)]="clientModel.email" name="email" placeholder="Email">
+    <input type="text" [(ngModel)]="clientModel.civilite" (ngModelChange)="validateNom($event)"  name="civilite" placeholder="Civilite">
+    <input type="password" [(ngModel)]="clientModel.password" name="password" placeholder="Mot de passe">
+    <input type="text" [(ngModel)]="clientModel.login" name="login" placeholder="Login">
+    <input type="text" [(ngModel)]="clientModel.pays" (ngModelChange)="validateNom($event)"  name="pays" placeholder="Pays">
+    
+    <button type="submit">Valider</button>
+  </form>
