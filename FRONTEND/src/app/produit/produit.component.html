@@ -1,8 +1,10 @@
+<!-- produit.component.html -->
 <div>
-    <h2>{{ produit.name }} - {{ produit.brand }}</h2>
-    <p>Category: {{ produit.category }}</p>
-    <p>Price: {{ getFormattedPrice(produit.price) }}</p>
-    <p>Description: {{ produit.description }}</p>
-    <p>Stocks: {{ produit.stocks }}</p>
-  </div>
-  
+  <h2>{{ produit.name }} - {{ produit.brand }}</h2>
+  <p>Category: {{ produit.category }}</p>
+  <p>Price: {{ getFormattedPrice(produit.price) }}</p>
+  <p>Description: {{ produit.description }}</p>
+  <p>Stocks: {{ produit.stocks }}</p>
+  <!-- Ajouter le bouton d'ajout au panier ici -->
+  <button (click)="addToCart()">Ajouter au Panier</button>
+</div>

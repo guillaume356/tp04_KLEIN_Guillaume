@@ -10,7 +10,6 @@ import { HttpClient } from '@angular/common/http';
 import { MoteurDeRechercheComponent } from './moteur-de-recherche/moteur-de-recherche.component';
 import { GestionCartesModule } from './gestion-cartes/gestion-cartes.module';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,7 +23,7 @@ import { GestionCartesModule } from './gestion-cartes/gestion-cartes.module';
     GestionCartesModule,
     MoteurDeRechercheComponent,
     RouterOutlet, 
-    NgIf
+    NgIf,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

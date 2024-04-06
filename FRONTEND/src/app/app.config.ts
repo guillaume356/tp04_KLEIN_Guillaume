@@ -1,12 +1,17 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; 
 import { provideRouter } from '@angular/router';
-
-import { provideHttpClient } from '@angular/common/http';
+import { NgxsModule } from '@ngxs/store';
 import { routes } from './app.routes';
+import { ArticleState } from './article/articles.state';
+import { CartState } from './cart/cart.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideHttpClient()
-  ]
+    importProvidersFrom(
+      NgxsModule.forRoot([ArticleState,CartState]),
+      HttpClientModule
+    ),
+  ],
 };

@@ -1,0 +1,25 @@
+
+<!-- Liste des articles disponibles avec un bouton pour ajouter chaque article au panier -->
+<div *ngFor="let article of articles$ | async">
+  <h2>{{ article.title }}</h2>
+  <p>{{ article.content }}</p>
+  <!-- Assurez-vous que AddToCartButtonComponent est déclaré comme standalone ou inclus dans un module importé -->
+  <app-add-to-cart-button [product]="article"></app-add-to-cart-button>
+</div>
+
+<!-- Bouton pour ajouter un nouvel article de test -->
+<form (submit)="addArticle()">
+    <input type="text" [(ngModel)]="newArticle.title" name="title" placeholder="Titre de l'article" required>
+    <textarea [(ngModel)]="newArticle.content" name="content" placeholder="Contenu de l'article" required></textarea>
+    <button type="submit">Créer un Nouvel Article</button>
+  </form>
+
+<!-- Affiche le contenu du panier et offre une option pour supprimer des articles -->
+
+
+  <div *ngFor="let item of (cartItems$ | async)">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+    <!-- Bouton pour supprimer l'article -->
+    <button (click)="removeFromCart(item)">Supprimer l'Article</button>
+    </div>

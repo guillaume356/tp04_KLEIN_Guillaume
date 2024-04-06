@@ -1,0 +1,5 @@
+<div *ngFor="let item of (cart$ | async)?.items">
+    <h3>{{ item.name }}</h3>
+    <button (click)="removeFromCart(item)">Supprimer</button>
+  </div>
+  
