@@ -1,0 +1,6 @@
+<!-- cart-page.component.html -->
+<div *ngFor="let item of (cartItems$ | async)">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.content }}</p>
+    <button (click)="removeFromCart(item)">Supprimer l'Article</button>
+  </div>

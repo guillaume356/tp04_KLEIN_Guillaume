@@ -13,13 +13,3 @@
     <textarea [(ngModel)]="newArticle.content" name="content" placeholder="Contenu de l'article" required></textarea>
     <button type="submit">Créer un Nouvel Article</button>
   </form>
-
-<!-- Affiche le contenu du panier et offre une option pour supprimer des articles -->
-
-
-  <div *ngFor="let item of (cartItems$ | async)">
-    <h2>{{ item.title }}</h2>
-    <p>{{ item.content }}</p>
-    <!-- Bouton pour supprimer l'article -->
-    <button (click)="removeFromCart(item)">Supprimer l'Article</button>
-    </div>
