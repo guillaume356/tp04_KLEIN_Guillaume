@@ -1,34 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Produit } from '../produit/produit';
+import { Observable, of } from 'rxjs';
 import { CatalogueService } from './catalogue.service';
+import { Produit } from '../produit/produit';
 import { CommonModule } from '@angular/common';
-import { ProduitComponent } from '../produit/produit.component';
 import { MoteurDeRechercheComponent } from '../moteur-de-recherche/moteur-de-recherche.component';
-import { switchMap } from 'rxjs/operators';
-
+import { ProduitComponent } from '../produit/produit.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-catalogue',
-  standalone: true,
-  imports: [CommonModule, ProduitComponent, MoteurDeRechercheComponent], 
   templateUrl: './catalogue.component.html',
-  styleUrls: ['./catalogue.component.css']
+  imports: [CommonModule, MoteurDeRechercheComponent, ProduitComponent, HttpClientModule],
+  standalone: true,
 })
 export class CatalogueComponent implements OnInit {
-  
-  catalogue$?: Observable<Produit[]>; 
-  catalogue: Produit[] = [];
+  catalogue$: Observable<Produit[]> = of([]);
 
-  constructor(private catalogueService: CatalogueService) {}
+  constructor(private catalogueService: CatalogueService) { }
 
-  ngOnInit(): void {
-    this.catalogue$ = this.catalogueService.searchCriteria$.pipe(
-      switchMap(criteria => 
-        this.catalogueService.getCatalogue()
-      )
-    );
+  ngOnInit() {
+    this.catalogue$ = this.catalogueService.getProduits();
+    this.catalogue$.subscribe(data => {
+      console.log('Data received in component:', data);
+    });
   }
-  
+
+  onSearch(criteria: { name: string, brand: string }) {
+    this.catalogue$ = this.catalogueService.searchProduits(criteria);
+    this.catalogue$.subscribe(data => {
+      console.log('Data received from search:', data);
+    });
+  }
 }

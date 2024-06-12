@@ -1,0 +1,103 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "name": "Lamborghini Aventador",
+      "brand": "Lamborghini",
+      "category": "Luxury",
+      "price": 400000,
+      "description": "The Lamborghini Aventador is a mid-engine sports car produced by the Italian automotive manufacturer Lamborghini. The Aventador was designed to replace the then-decade-old Murciélago as the new flagship model. Named after a fighting bull, the Aventador's aggressive styling and powerful performance make it a true icon of luxury and performance.",
+      "stocks": 10
+    },
+    {
+      "id": 2,
+      "name": "Rolls-Royce Phantom",
+      "brand": "Rolls-Royce",
+      "category": "Luxury",
+      "price": 500000,
+      "description": "The Rolls-Royce Phantom is a full-sized luxury saloon car made by Rolls-Royce Motor Cars. It was launched in 2003 and is the first model introduced during the BMW era. The Phantom is renowned for its luxurious interior, refined exterior design, and smooth ride, making it the epitome of automotive luxury.",
+      "stocks": 8
+    },
+    {
+      "id": 3,
+      "name": "Bentley Continental GT",
+      "brand": "Bentley",
+      "category": "Luxury",
+      "price": 250000,
+      "description": "The Bentley Continental GT is a grand tourer produced by British automaker Bentley Motors. It is the first car released by Bentley under Volkswagen AG management after the company's acquisition in 1998. The Continental GT combines lavish luxury with exhilarating performance, making it a top choice among luxury car enthusiasts.",
+      "stocks": 12
+    },
+    {
+      "id": 4,
+      "name": "Lamborghini Aventador Model 4",
+      "brand": "Lamborghini",
+      "category": "Luxury",
+      "price": 404000,
+      "description": "A variation of the Aventador, offering enhanced performance and exclusivity.",
+      "stocks": 9
+    },
+    {
+      "id": 5,
+      "name": "Rolls-Royce Phantom Model 5",
+      "brand": "Rolls-Royce",
+      "category": "Luxury",
+      "price": 505000,
+      "description": "An even more luxurious version of the Phantom, with bespoke interior options.",
+      "stocks": 7
+    },
+    {
+      "id": 6,
+      "name": "Bentley Continental GT Model 6",
+      "brand": "Bentley",
+      "category": "Luxury",
+      "price": 256000,
+      "description": "The latest in the Continental GT line, with improved dynamics and technology.",
+      "stocks": 11
+    },
+    {
+      "id": 7,
+      "name": "Porsche 911 Turbo S",
+      "brand": "Porsche",
+      "category": "Sports",
+      "price": 203500,
+      "description": "The Porsche 911 Turbo S blends performance with luxury, featuring a powerful engine and a refined interior.",
+      "stocks": 5
+    },
+    {
+      "id": 8,
+      "name": "Ferrari F8 Tributo",
+      "brand": "Ferrari",
+      "category": "Sports",
+      "price": 276000,
+      "description": "The Ferrari F8 Tributo offers astonishing performance with its turbocharged V8 engine, representing the pinnacle of Italian sports car engineering.",
+      "stocks": 4
+    },
+    {
+      "id": 9,
+      "name": "Aston Martin DBS Superleggera",
+      "brand": "Aston Martin",
+      "category": "Luxury",
+      "price": 316300,
+      "description": "The Aston Martin DBS Superleggera combines luxury with high performance, featuring a powerful V12 engine and sophisticated styling.",
+      "stocks": 3
+    },
+    {
+      "id": 10,
+      "name": "McLaren 720S",
+      "brand": "McLaren",
+      "category": "Supercar",
+      "price": 299000,
+      "description": "The McLaren 720S is known for its revolutionary aerodynamics, lightweight construction, and exhilarating performance.",
+      "stocks": 6
+    },
+    {
+      "id": 11,
+      "name": "Bugatti Chiron",
+      "brand": "Bugatti",
+      "category": "Supercar",
+      "price": 3000000,
+      "description": "The Bugatti Chiron sets the standard for hypercars, with unmatched performance, speed, and luxury.",
+      "stocks": 2
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<!-- account-page.component.html -->
+<form (ngSubmit)="submitForm()">
+    <input type="text" [(ngModel)]="accountForm.username" name="username" required placeholder="Username">
+    <input type="password" [(ngModel)]="accountForm.password" name="password" required placeholder="Password">
+    <button type="submit">Register</button>
+  </form>
+  

@@ -10,6 +10,12 @@ import { HttpClient } from '@angular/common/http';
 import { MoteurDeRechercheComponent } from './moteur-de-recherche/moteur-de-recherche.component';
 import { GestionCartesModule } from './gestion-cartes/gestion-cartes.module';
 
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ProduitComponent } from './produit/produit.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,6 +23,7 @@ import { GestionCartesModule } from './gestion-cartes/gestion-cartes.module';
     CommonModule, 
     HeaderComponent, 
     BodyComponent, 
+    HttpClientModule,
     FooterComponent, 
     RecapitulatifComponent, 
     CatalogueComponent, 
@@ -24,6 +31,9 @@ import { GestionCartesModule } from './gestion-cartes/gestion-cartes.module';
     MoteurDeRechercheComponent,
     RouterOutlet, 
     NgIf,
+    AppComponent,
+
+    ReactiveFormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

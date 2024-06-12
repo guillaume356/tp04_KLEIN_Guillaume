@@ -4,7 +4,7 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component';
 import { GestionCartesComponent } from './gestion-cartes/gestion-cartes/gestion-cartes.component';
 import { ArticleComponent } from './article/article.component'; 
-
+import { AccountPageComponent } from './account-page/account-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 
 export const routes: Routes = [
@@ -15,4 +15,5 @@ export const routes: Routes = [
   { path: 'gestion-cartes', component: GestionCartesComponent },
   { path: 'articles', component: ArticleComponent }, 
   { path: 'cart', component: CartPageComponent },
+  { path: 'account', component: AccountPageComponent },
 ];

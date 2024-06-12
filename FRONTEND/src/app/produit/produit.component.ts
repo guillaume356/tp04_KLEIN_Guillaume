@@ -18,12 +18,10 @@ export class ProduitComponent {
   constructor(private store: Store) {}
 
   addToCart() {
-    // Dispatch l'action AddToCart avec le produit actuel
     this.store.dispatch(new AddToCart(this.produit));
   }
 
   getFormattedPrice(price: number): string {
-    // Mettez en forme le prix comme vous le souhaitez, par exemple :
     return `$${price.toFixed(2)}`;
   }
 }

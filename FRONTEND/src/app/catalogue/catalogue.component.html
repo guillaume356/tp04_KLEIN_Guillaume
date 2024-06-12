@@ -1,2 +1,7 @@
-<app-moteur-de-recherche></app-moteur-de-recherche> 
-<app-produit *ngFor="let produit of catalogue$ | async" [produit]="produit"></app-produit>
+
+
+
+<app-moteur-de-recherche (searchCriteriaChanged)="onSearch($event)"></app-moteur-de-recherche>
+<div *ngFor="let produit of catalogue$ | async">
+  <app-produit [produit]="produit"></app-produit>
+</div>

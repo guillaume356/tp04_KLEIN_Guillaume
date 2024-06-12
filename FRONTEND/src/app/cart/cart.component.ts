@@ -15,7 +15,7 @@ export class CartComponent {
 
   constructor(private store: Store) {}
 
-  removeFromCart(item: any) { // Remplacez any par le type approprié
+  removeFromCart(item: any) {
     console.log('Dispatching RemoveFromCart with item:', item);
     this.store.dispatch(new RemoveFromCart(item));
   }

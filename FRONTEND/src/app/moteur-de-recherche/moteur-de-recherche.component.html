@@ -1,6 +1,6 @@
-    <form (submit)="onSearch()">
-        <input type="text" [(ngModel)]="searchCriteria.name" name="name" placeholder="Nom du produit">
-        <input type="text" [(ngModel)]="searchCriteria.brand" name="brand" placeholder="Marque">
-        <button type="submit">Rechercher</button>
-    </form>
-    
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <input formControlName="name" placeholder="Nom du produit">
+    <input formControlName="brand" placeholder="Marque">
+    <button type="submit">Rechercher</button>
+  </form>
+  
