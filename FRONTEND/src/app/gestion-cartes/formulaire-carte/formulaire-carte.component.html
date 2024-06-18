@@ -6,3 +6,10 @@
     <input formControlName="expirationAnnee" placeholder="Année d'expiration">
     <button type="submit" [disabled]="!carteForm.valid">Soumettre</button>
   </form>
+
+  <ul>
+    <li *ngFor="let carte of cartes">
+      <strong>Nom de la carte:</strong> {{ carte.nomCarte }} <br>
+      <strong>Date d'expiration:</strong> {{ carte.expirationMois }}/{{ carte.expirationAnnee }}
+    </li>
+  </ul>

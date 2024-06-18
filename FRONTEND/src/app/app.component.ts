@@ -40,7 +40,7 @@ import { ProduitComponent } from './produit/produit.component';
 })
 export class AppComponent {
   constructor(private http: HttpClient) {}
-  title = 'tp3_Guillaume_KLEIN';
+  title = 'AutoShop';
   formSubmitted = false;
 
   handleFormSubmission(event: boolean) {

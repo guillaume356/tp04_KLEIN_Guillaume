@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http'; 
 
 @Component({
-  selector: 'app-account-page',
+  selector: 'app-login-page',
   standalone: true,
   imports: [FormsModule, HttpClientModule],
-  templateUrl: './account-page.component.html',
-  styleUrls: ['./account-page.component.css'],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class AccountPageComponent {
-  accountForm = {
+export class LoginPageComponent {
+  loginForm = {
     username: '',
     password: ''
   }; 
@@ -19,12 +19,12 @@ export class AccountPageComponent {
   constructor(private http: HttpClient) {} 
 
   submitForm() {
-    this.http.post('http://localhost:8080/register.php', this.accountForm).subscribe({
+    this.http.post('http://localhost:8080/login.php', this.loginForm).subscribe({
       next: (result) => {
-        console.log('User created:', result);
+        console.log('Login successful:', result);
       },
       error: (error) => {
-        console.error('Error creating user:', error);
+        console.error('Login error:', error);
       }
     });
   }

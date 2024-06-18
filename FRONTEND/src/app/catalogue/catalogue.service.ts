@@ -9,7 +9,7 @@ import { Produit } from '../produit/produit';
   providedIn: 'root',
 })
 export class CatalogueService {
-  private baseUrl = 'http://localhost:8080'; // Utilisation de l'URL depuis environment
+  private baseUrl = 'http://localhost:8080'; 
   private searchCriteriaSubject = new BehaviorSubject<{ name: string; brand: string }>({ name: '', brand: '' });
   searchCriteria$ = this.searchCriteriaSubject.asObservable();
 
