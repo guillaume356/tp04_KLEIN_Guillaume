@@ -19,10 +19,8 @@ class Auth {
     }
 
     private static function getUserPasswordFromDB($username) {
-        // Logique de récupération du mot de passe hashé depuis la base de données
     }
 
     private static function getUserByUsername($username) {
-        // Logique pour récupérer l'utilisateur depuis la base de données
     }
 }
